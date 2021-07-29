@@ -56,6 +56,19 @@ function StackedLinkedList() {
         return customArray
     }
 
+    this.reverse = () => {
+        let customArray = new Array(this.size)
+
+        for (let index = 0; index < customArray.length; index++) {
+            customArray[index] = last.value
+            this.pop()
+        }
+
+        for (let index = 0; index < customArray.length; index++) {
+            this.push(customArray[index])
+        }
+    }
+
     this.peek = () => {
         if(isEmpty())
             return null
