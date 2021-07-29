@@ -39,9 +39,9 @@ function Queue() {
         if(isEmpty())
             throw "Can't Reverse an Empty List"
         
-        let customArray = []
-        for (let index = 0; index < this.size; index++) {
-            customArray.push(first.value)
+        let customArray = new Array(this.size)
+        for (let index = 0; index < customArray.length; index++) {
+            customArray[index] = first.value
             this.dequeue();
         }
 
