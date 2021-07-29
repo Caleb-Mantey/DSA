@@ -83,6 +83,19 @@ function SLinkedList (){
         return null
     }
 
+    this.toArray = () => {
+        let customArray = []
+
+        let node_item = this.first
+
+        for (let index = 0; index < this.size; index++) {
+            customArray.push(node_item.value)
+            node_item = node_item.next
+        }
+
+        return customArray
+    }
+
     this.contains = (item) => {
         if(this.isEmpty())
             throw "EMpty Linked List"

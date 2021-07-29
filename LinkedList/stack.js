@@ -1,6 +1,6 @@
 function StackedLinkedList() {
-    let first = null
-    let last = null
+    let first, last = null
+    this.size = 0
 
     function Node(Value) {
         this.value = Value
@@ -24,6 +24,8 @@ function StackedLinkedList() {
 
             first.prev = last
         }
+
+        this.size++
     }
 
     this.pop = () => {
@@ -38,6 +40,20 @@ function StackedLinkedList() {
             last = prev
             first.prev = last
         }
+
+        this.size--
+    }
+
+    this.toArray = () => {
+        let customArray = []
+
+        let node_item = first
+        for (let index = 0; index < this.size; index++) {
+            customArray.push(node_item.value)
+            node_item = node_item.next
+        }
+
+        return customArray
     }
 
     this.peek = () => {
