@@ -12,7 +12,7 @@ function StackedLinkedList() {
 
         let newItem = new Node(item)
 
-        if(isEmpty())
+        if(empty())
         {
             first = last = newItem
         }else{
@@ -29,9 +29,11 @@ function StackedLinkedList() {
     }
 
     this.pop = () => {
-        if(isEmpty())
+        if(empty())
             throw "Can't pop an empty list"
         
+        let item_to_pop = last.value
+
         if(first == last)
             first = last = null
         else{
@@ -42,6 +44,8 @@ function StackedLinkedList() {
         }
 
         this.size--
+
+        return item_to_pop
     }
 
     this.toArray = () => {
@@ -60,8 +64,7 @@ function StackedLinkedList() {
         let customArray = new Array(this.size)
 
         for (let index = 0; index < customArray.length; index++) {
-            customArray[index] = last.value
-            this.pop()
+            customArray[index] = this.pop()
         }
 
         for (let index = 0; index < customArray.length; index++) {
@@ -70,7 +73,7 @@ function StackedLinkedList() {
     }
 
     this.peek = () => {
-        if(isEmpty())
+        if(empty())
             return null
 
         return last.value
@@ -80,9 +83,13 @@ function StackedLinkedList() {
         first
     )
 
-    let isEmpty = () => (
+    let empty = () => (
         (first == null && last == null)
     )
+
+    this.isEmpty = () => {
+        return empty();
+    }
 }
 
 module.exports = StackedLinkedList

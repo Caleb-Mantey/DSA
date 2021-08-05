@@ -25,6 +25,8 @@ function Queue() {
         if(isEmpty())
             throw "Can't DeQueue an Empty List"
         
+        let item_to_dequeue = first.value
+
         if(first == last)
             first = last = null
         else{
@@ -33,6 +35,8 @@ function Queue() {
         }
 
         this.size--
+
+        return item_to_dequeue
     }
 
     this.reverse = () => {
@@ -41,8 +45,7 @@ function Queue() {
         
         let customArray = new Array(this.size)
         for (let index = 0; index < customArray.length; index++) {
-            customArray[index] = first.value
-            this.dequeue();
+            customArray[index] = this.dequeue();
         }
 
         for (let index = (customArray.length - 1); index >= 0; index--) {

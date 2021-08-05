@@ -21,6 +21,8 @@ function SLinkedList (){
         this.size++
     }
 
+    
+
     this.removeFirstItem = () => {
         if(this.isEmpty())
             throw "EMpty Linked List"
@@ -81,6 +83,31 @@ function SLinkedList (){
         }
 
         return null
+    }
+
+    this.removeItem = (index) => {
+        if(this.isEmpty())
+            return null
+
+        if(index == 0)
+            return this.removeFirstItem()
+
+        if(index == (this.size - 1))
+            return this.removeLastItem()
+
+        let previous_node_item
+        let node_item = this.first
+
+        for(let i = 0; i < this.size; i++){
+            if(index == i){
+                previous_node_item.next = node_item.next
+                this.size--
+                return
+            }
+
+            previous_node_item = node_item
+            node_item = node_item.next
+        }
     }
 
     this.toArray = () => {
