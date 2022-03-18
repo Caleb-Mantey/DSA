@@ -21,6 +21,7 @@ function CircularArray(arraySize) {
         if(this.isEmpty())
             throw "Cannot pop an empty list"
 
+            
         item_to_pop = this.items[back]
         this.items[back] = 0
         this.count--
@@ -34,6 +35,8 @@ function CircularArray(arraySize) {
 
     //     this.items[front] = item
     // }
+
+    
 
     this.dequeue = () => {
         if(this.isEmpty())

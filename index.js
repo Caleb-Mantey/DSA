@@ -1,18 +1,18 @@
-const SLinkedList = require('./LinkedList/singly_linked_list');
-const DLinkedList = require('./LinkedList/doubly_linked_list');
-const Stack = require('./LinkedList/stack');
-const Queue = require('./LinkedList/queue');
-const QueueWithTwoStacks = require('./Queues/queues_with_two_stacks');
-const QueuesWithArrays = require('./Queues/queues_with_array');
-const CircularArray = require('./Arrays/circular_arrays')
-sLinkedList = new SLinkedList()
-sLinkedList.push(10)
-sLinkedList.push(20)
-sLinkedList.push(30)
-sLinkedList.removeItem(1)
-console.log(sLinkedList.getItem(1))
-console.log(sLinkedList.toArray())
-console.log(sLinkedList)
+const SLinkedList = require("./Linear Data Structures/LinkedList/singly_linked_list");
+const DLinkedList = require("./Linear Data Structures/LinkedList/doubly_linked_list");
+const Stack = require("./Linear Data Structures/LinkedList/stack");
+const Queue = require("./Linear Data Structures/LinkedList/queue");
+const QueueWithTwoStacks = require("./Linear Data Structures/Queues/queues_with_two_stacks");
+const QueuesWithArrays = require("./Linear Data Structures/Queues/queues_with_array");
+const CircularArray = require("./Linear Data Structures/Arrays/circular_arrays");
+sLinkedList = new SLinkedList();
+sLinkedList.push(10);
+sLinkedList.push(20);
+sLinkedList.push(30);
+sLinkedList.removeItem(1);
+console.log(sLinkedList.getItem(1));
+console.log(sLinkedList.toArray());
+console.log(sLinkedList);
 // dLinkedList = new DLinkedList()
 
 // dLinkedList.push(10)
@@ -58,7 +58,6 @@ console.log(sLinkedList)
 // console.log(queue.dequeue())
 // console.log(queue)
 
-
 // queueArrays = new QueuesWithArrays(5)
 // queueArrays.enqueue(1)
 // queueArrays.enqueue(2)
@@ -69,7 +68,6 @@ console.log(sLinkedList)
 // queueArrays.dequeue()
 
 // console.log(queueArrays)
-
 
 // cArray = new CircularArray(5)
 // cArray.push(1)
@@ -82,4 +80,3 @@ console.log(sLinkedList)
 // cArray.pop()
 
 // console.log(cArray);
-

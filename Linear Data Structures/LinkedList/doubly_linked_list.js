@@ -131,6 +131,10 @@ function DLinkedList() {
     //     return index_of_item
     // }
 
+
+
+    
+
     // Better Approach - but likely to be slow depending on the position of the last ocurence of an element
     this.lastIndexOf = (item) => {
         if(this.isEmpty())
